@@ -3,11 +3,13 @@ import { Link, graphql } from "gatsby"
 import { css } from "@emotion/core"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
+import SEO from "../components/SEO"
 
 export default ({ data }) => {
-  console.log(data)
+  // console.log(data)
   return (
     <Layout>
+      <SEO title={ data.site.siteMetadata.title} />
       <div>
         <h1
           css={css`
@@ -49,6 +51,11 @@ export default ({ data }) => {
 
 export const query = graphql`
   query {
+    site {
+      siteMetadata {
+          title
+      }
+    }
     allMarkdownRemark(sort: {fields: frontmatter___date, order: DESC}) {
         edges {
           node {

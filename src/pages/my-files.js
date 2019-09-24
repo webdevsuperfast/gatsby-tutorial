@@ -1,11 +1,13 @@
 import React from "react"
 import { graphql } from "gatsby"
 import Layout from "../components/layout"
+import SEO from "../components/SEO"
 
 export default ({ data }) => {
-  console.log(data)
+  // console.log(data)
   return (
     <Layout>
+      <SEO title="Site Files" />
       <div>
         <h1>My Site's Files</h1>
         <table>
