@@ -1,6 +1,11 @@
 module.exports = {
   siteMetadata: {
-    title: `Pandas Eating Lots`
+    title: `Pandas Eating Lots`,
+    titleTemplate: `%s - Gatsby Tutorial`,
+    description: `This is a sample description`,
+    url: `https://rotsenacob.com`,
+    image: `/images/favicon.ico`,
+    twitterUsername: `@acobrotsen`
   },
   plugins: [
     {
